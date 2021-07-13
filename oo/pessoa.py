@@ -3,7 +3,7 @@ class Pessoa:
     def __init__(self, *filhos, nome = None, idade = 19):
         self.idade = idade
         self.nome = nome
-        self.filhos =list(filhos)
+        self.filhos = list(filhos)
 
     def cumprimentar(self):
         return f'Olá {id(self)}'
@@ -15,7 +15,6 @@ class Pessoa:
     @classmethod
     def nome_e_atributos_de_classe(cls):
         return f'{cls} - olhos {cls.olhos}'
-
 
 if __name__ == '__main__':
     Bernardo = Pessoa(nome = 'Bernardo')
