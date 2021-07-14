@@ -106,8 +106,8 @@ class FaseTestes(TestCase):
 
     def teste_acabou_com_porcos_e_passaros(self):
         fase = Fase()
-        porcos = [PorcoFake(1, 1) for _ in range(2)]  # criando 2 porcos
-        passaros = [PassaroFake(1, 1) for _ in range(2)]  # criando 2 pássaros
+        porcos = [PorcoFake(1, 1) for _ in range(2)]  # criando 2 porcos por list comprehension
+        passaros = [PassaroFake(1, 1) for _ in range(2)]  # criando 2 pássaros por list comprehension
         fase.adicionar_porco(*porcos)
         fase.adicionar_passaro(*passaros)
 
@@ -173,7 +173,7 @@ class FaseTestes(TestCase):
         fase.lancar(90, 1)
         fase.lancar(45, 3)
         fase.lancar(31,
-                    5)  # testando que lançar passaros depios de todos
+                    5)  # testando que lançar passaros depois de todos
         # lançados não causa erro
 
         self.assertTrue(passaros[0].foi_lancado())
